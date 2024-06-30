@@ -5,7 +5,7 @@ typedef struct str {
 } str;
 
 
-__attribute__((unused)) void setstr(str *string, char *value);
+void setstr(str *string, char *value);
 
 char *retstr(str *string);
 
