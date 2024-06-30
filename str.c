@@ -1,9 +1,6 @@
+#include "str.h"
 #include <stdlib.h>
 
-typedef struct str
-{
-    char* value;
-} str;
 
 void setstr(str* string, char* value)
 {
@@ -15,7 +12,7 @@ char* retstr(str* string)
     return string->value;
 }
 
-int lenstr(char* a)
+int lenstr(const char *a)
 {
     int index = 0;
     while(a[index] != '\0') index++;
