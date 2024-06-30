@@ -25,9 +25,11 @@ int lenstr(char* a)
 
 char* addstr(char* a, char* b)
 {
-    char* result = (char*)malloc(sizeof(a) + sizeof(b));
+    char* result = (char*)malloc(lenstr(a) + lenstr(b) + 1);
     for (int index = 0; index < lenstr(a); index++) result[index] = a[index];
     for (int index = 0; index < lenstr(b); index++) result[lenstr(a) - 1 + index] = b[index];
+
+    result[lenstr(a) + lenstr(b)] = '\0';
     return result;
 }
 
